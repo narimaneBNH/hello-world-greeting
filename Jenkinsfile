@@ -117,7 +117,7 @@ pipeline {
       
           steps {
             
-            docker.build registry + ":$BUILD_NUMBER"
+           sh 'docker build -t tomcat_app /home/jenkins/docker/tomcat_app'
           }
           
         }
