@@ -126,7 +126,7 @@ epipeline {
           steps {
             sh "docker tag tomcat_app reeban/tomcat_app:${BUILD_NUMBER}"
             sh 'docker tag tomcat_app reeban/tomcat_app'
-            sh 'docker login -u dockernode1 -p dockernode1'
+            sh 'docker login -u reeban -p dockernode1'
             sh "docker push reeban/tomcat_app:${BUILD_NUMBER}"
             sh 'docker push reeban/tomcat_app'
           }
