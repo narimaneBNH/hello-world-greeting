@@ -47,7 +47,7 @@ pipeline {
         stage('Publication du binaire') {
 
           steps {
-            sh "curl -u admin:Shaymin122 --upload-file target/*.war 'http://10.10.20.31:8081/repository/depot_test/rondoudou${BUILD_NUMBER}.war'"        
+            sh "curl -u admin:admin --upload-file target/*.war 'http://10.10.20.31:8081/repository/depot_test/rondoudou${BUILD_NUMBER}.war'"        
           }
 
         }
@@ -85,8 +85,8 @@ pipeline {
   
           steps {
     
-            sh "curl -u admin:Shaymin122 --upload-file /home/jenkins/tomcat/webapps/rondoudou.war 'http://10.10.20.31:8081/repository/hello_fiable/rondoudou_fiable${BUILD_NUMBER}.war'"
-            sh "curl -u admin:Shaymin122 --upload-file /home/jenkins/tomcat/webapps/rondoudou.war 'http://10.10.20.31:8081/repository/hello_livrable/dernier_rondoudou_fiable.war'"
+            sh "curl -u admin:admin --upload-file /home/jenkins/tomcat/webapps/rondoudou.war 'http://10.10.20.31:8081/repository/hello_fiable/rondoudou_fiable${BUILD_NUMBER}.war'"
+            sh "curl -u admin:admin --upload-file /home/jenkins/tomcat/webapps/rondoudou.war 'http://10.10.20.31:8081/repository/hello_livrable/dernier_rondoudou_fiable.war'"
   
           }
   
