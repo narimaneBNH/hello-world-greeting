@@ -116,7 +116,8 @@ pipeline {
         stage('Compilation de l\'image') {
       
           steps {
-            sh 'docker build -f Dockerfile -t tomcat_app /home/jenkins/docker/tomcat_app'
+            
+            docker.build registry + ":$BUILD_NUMBER"
           }
           
         }
